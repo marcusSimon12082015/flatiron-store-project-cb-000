@@ -5,7 +5,7 @@
     <% @itemPrice = item.price / 100 %>
     <li><%= link_to item.title, item_path(item) %> | <%= number_to_currency(@itemPrice) %>
     <% if user_signed_in? %>
-      <%= button_to "Add to Cart", new_line_item_path(item.id) %>
+      <%= button_to "Add to Cart", line_items_path(item.id) %>
     <% end %>
 <% end %>
 </ul>
